@@ -21,12 +21,11 @@ function helloName() {
 console.log('If you want to go down a philosophy rabbithole;', helloName());
 
 // I wanted to try this a different/harder way because life is pain.
-function helloName1() {
-  let name = 'His royale majesty, First of His Name, Sir Reginald Rottweiler Featherbottom';
-  return name;
+function helloName1(name1) {
+  console.log(`Behold! His royale majesty, First of their Name, Sir ${name1} Rottweiler Featherbottom.`);
 }
 // Remember to call the function to test
-console.log(`Kneel before ${helloName1} or thoust shall be tarred and feathered`);
+helloName1('Optimus')
 
 // 3. Function to add two numbers together & return the result
 function addNumbers( firstNumber, secondNumber ) {
@@ -69,14 +68,21 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
 function getLast( array ) {
+
   let lastItemofArray = array[array.length - 1]
   return lastItemofArray
 }
 console.log("The last element of this array:", getLast())
+=======
+  return array [array.length];
+}
+console.log("This is the last element of an array;", getLast());
+
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
+
 function find( value, array ){
   for ( let i=0; i<array[value]; i++ ){
     if ( array[ i ] === value)
