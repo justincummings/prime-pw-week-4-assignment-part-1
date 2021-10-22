@@ -67,34 +67,33 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the
 //    array is empty, return `undefined`.
+let numArry = [1, 2, 3]
 function getLast( array ) {
+  return array[array.length-1] || null;
+}
+//added an array here to test and an "or" conditional for undefined (null) return
 
-  let lastItemofArray = array[array.length - 1]
-  return lastItemofArray
-}
-console.log("The last element of this array:", getLast())
-=======
-  return array [array.length];
-}
-console.log("This is the last element of an array;", getLast());
+console.log("The last element of this array:", getLast(numArry));
+console.log("Should return undefined/null:", getLast([]));
+
 
 
 // 7. Function to find a value in an array. Return true if the
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find
 
-function find( value, array ){
-  for ( let i=0; i<array[value]; i++ ){
-    if ( array[ i ] === value)
-    {return true;}
-    else {return false;}
+function find( array ){
+  for ( let i=0; i<array.length; i++ ){
+    if ( array[ i ] === 1 ){
+    return true;
+    }
+} return false;
 }
-}
-// I had lots of issues with syntax errors while trying to figure out the logic.
-// I'm still having to talk my way through logic.
 
+// updated logic if statement and return for false
 
-
+console.log("Should return true;", find([10, 66, 119, 1]));
+console.log("Should return false/undefined;",find([]));
 
 
 // ----------------------
